@@ -30,7 +30,7 @@ before_script:
   -O $HOME/twrp.tzst
   - tar --zstd -xf twrp.tzst --directory $HOME/twrp/ && rm twrp.tzst
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/thespider2/android_device_lava_iris65.git device/lava/iris65
+  - cd $HOME/twrp/ && git clone https://github.com/thespider2/android_device_iris65.git device/lava/iris65
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - git clone https://github.com/omnirom/android_bootable_recovery.git -b android-8.1 --depth 1 bootable/recovery 
   - |
@@ -51,7 +51,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: thespider2/android_device_lava_iris65
+    repo: thespider2/android_device_iris65
     branch: master
 branches:
   except:
